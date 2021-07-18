@@ -1,4 +1,4 @@
-name: CI-CD YaMDB_Final
+name: CI/CD YaMDB_Final
 
 on:
   push:
