@@ -1,4 +1,6 @@
 # Yatube - Homework
+
+![YaMDB%20workflow](https://github.com/mrvinil/yamdb_final/workflows/CI-CD%20YaMDB_Final/badge.svg) <br>
 Это учебный проект по работе с **API**, разработанный в рамках курса **"Яндекс.Практикум - Python backend developer"**.
 
 # Описание
