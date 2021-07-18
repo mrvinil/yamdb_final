@@ -13,8 +13,8 @@ class YamdbUserManager(BaseUserManager):
     Кастомный User Manager для кастомной модели пользователя.
     Обеспечивает правильную реализацию команды 'manage.py createsuperuser'
     """
-    def create_superuser(self, username=None, password=None, email=None):
-        user_obj = self.create_user(
+    def create_superuser(self, password=None, email=None):
+        self.create_user(
             username=str(uuid1()),
             email=email,
             password=password,
@@ -22,7 +22,7 @@ class YamdbUserManager(BaseUserManager):
             is_admin=True,
             is_active=True,
         )
-        return user_obj
+        return
 
     def create_user(self, email,
                     username,
