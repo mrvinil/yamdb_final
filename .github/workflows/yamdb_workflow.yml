@@ -2,7 +2,7 @@ name: CI/CD YaMDB_Final
 
 on:
   push:
-    branches: [ developer ]
+    branches: [ master ]
 
 jobs:
   tests:
