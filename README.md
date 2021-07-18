@@ -23,18 +23,22 @@ JWT-токен (Отправление confirmation_code на переданны
 1) Запустить docker-compose:<br>
 `docker-compose up`
    
+2) Выполнить эти команды:<br>
+   `sudo docker-compose exec web python manage.py makemigrations api`<br>
+   `sudo docker-compose exec web python manage.py makemigrations users`<br>
+   
 
-2) Обязательно выполнить миграции:<br>
-`docker-compose exec web python manage.py migrate --noinput`
+3) Обязательно выполнить миграции:<br>
+`sudo docker-compose exec web python manage.py migrate --noinput`
    
 
    
-3) Создать суперюзера:<br>
-`docker-compose exec web python manage.py createsuperuser`
+4) Создать суперюзера:<br>
+`sudo docker-compose exec web python manage.py createsuperuser`
    
 
-4) Собрать статику:<br>
-`docker-compose exec web python manage.py collectstatic --no-input`
+5) Собрать статику:<br>
+`sudo docker-compose exec web python manage.py collectstatic --no-input`
 
 ## Usage
 Запустите проект на своём компьютере, по адресу http://localhost:8000/redoc/ будет доступна документация по **API Yatube.**
