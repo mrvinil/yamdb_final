@@ -13,7 +13,6 @@ class YamdbUserManager(BaseUserManager):
     Кастомный User Manager для кастомной модели пользователя.
     Обеспечивает правильную реализацию команды 'manage.py createsuperuser'
     """
-
     def create_superuser(self, username=None, password=None, email=None):
         user_obj = self.create_user(
             username=str(uuid1()),
@@ -55,7 +54,6 @@ class YamdbUser(AbstractUser):
     с помощью JWT токена. Админы могут управлять пользователями, модераторы
     могут управлять контентом, а пользователи могут публиковать контент.
     """
-
     class Role(models.TextChoices):
         USER = 'user'
         MODERATOR = 'moderator'
@@ -90,7 +88,7 @@ class YamdbUser(AbstractUser):
 
 
 @receiver(signals.post_save, sender=YamdbUser)
-def send_confirmation_code(sender, instance, created, **kwargs):
+def send_confirmation_code(instance, created):
     """
     Отправляем email с кодом подтверждения для активации пользователей
     """
