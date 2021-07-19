@@ -17,8 +17,8 @@ services:
     image: mrvinil/yamdb_final:latest
     restart: always
     volumes:
-      - ./static_valume:/code/static/
-      - ./media_valume:/code/media/
+      - static_value:/code/static/
+      - media_value:/code/media/
     depends_on:
       - db
     env_file:
@@ -29,9 +29,9 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./static_valume:/code/static/
-      - ./media_valume:/code/media/
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - static_value:/var/html/static/
+      - media_value:/var/html/media/
 
       -
     depends_on:
