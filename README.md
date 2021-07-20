@@ -3,6 +3,10 @@
 ![YaMDB%20workflow](https://github.com/mrvinil/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg) <br>
 Это учебный проект по работе с **API**, разработанный в рамках курса **"Яндекс.Практикум - Python backend developer"**.
 
+Проект доступен по адресу http://walshop.ru/
+
+Админка http://walshop.ru/admin/
+
 # Описание
 API для сервиса YaMDb. Позволяет работать со следующими сущностями:
 
@@ -42,3 +46,4 @@ JWT-токен (Отправление confirmation_code на переданны
 
 ## Usage
 Запустите проект на своём компьютере, по адресу http://localhost:8000/redoc/ будет доступна документация по **API Yatube.**
+
