@@ -6,6 +6,4 @@ COPY . .
 
 RUN pip3 install -r requirements.txt
 
-RUN chmod +x ./start.sh
-
-CMD ["./start.sh"]
+CMD gunicorn api_yamdb.wsgi:application --bind 0.0.0.0:8000
